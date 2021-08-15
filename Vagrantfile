@@ -15,7 +15,7 @@
 
 Vagrant.require_version ">= 1.4.3"
 Vagrant.configure("2") do |config|
-	numNodes = 5
+	numNodes = 4
 	r = numNodes..1
 	(r.first).downto(r.last).each do |i|
 		config.vm.define "node#{i}" do |node|
@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
                         # Setup SSH acces 
                         #################
                         # # from node 2 to all the others
-                        if i == 2
+            if i == 2
 			  node.vm.provision "shell" do |s|
 			    s.path = "scripts/setup-bionic-ssh.sh"
 			    s.args = "-s 3 -t #{numNodes}"
@@ -71,15 +71,15 @@ Vagrant.configure("2") do |config|
 			node.vm.provision "shell" do |s|
 			 	s.path = "scripts/setup-hadoop-workers.sh"
 			 	s.args = "-s 3 -t #{numNodes}"
-			 end
+			end
 
 			# Setting up Java
 			node.vm.provision "shell", path: "scripts/setup-java.sh"
-                        if i == 1
-                          node.vm.provision "shell" do |s|
-                            s.path = "scripts/setup-javac.sh"
-                          end
-                        end
+                if i == 1
+                    node.vm.provision "shell" do |s|
+            	    	s.path = "scripts/setup-javac.sh"
+             	end
+            end
                         
 			# Setup spark  (Spark slaves [3:X])
 			node.vm.provision "shell", path: "scripts/setup-spark.sh"
@@ -97,10 +97,10 @@ Vagrant.configure("2") do |config|
 			end
                         
 #			if i > 1
-			node.vm.provision "shell" do |s|
-			  s.path = "scripts/setup-pig.sh"
+#			node.vm.provision "shell" do |s|
+#			  s.path = "scripts/setup-pig.sh"
 #			  end
-			end
+#			end
 
                         # Setup NameNode in node 1
 			if i == 1
@@ -109,6 +109,6 @@ Vagrant.configure("2") do |config|
 			  end
 			end
 
-                end
+        end
 	end
 end

@@ -33,8 +33,15 @@ function installHive {
 	ln -s /usr/local/$HIVE_VERSION /usr/local/hive
 }
 
+function fixingJar {
+	rm /usr/local/hive/lib/guava-19.0.jar
+	cp /usr/local/hadoop/share/hadoop/hdfs/lib/guava-27.0-jre.jar /usr/local/hive/lib/
+}
+
 echo "############## Setting-up Hive"
 
 installHive
 setupHive
+fixingJar
 setupEnvVars
+
