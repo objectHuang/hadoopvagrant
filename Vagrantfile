@@ -96,11 +96,11 @@ Vagrant.configure("2") do |config|
 #			  end
 			end
                         
-#			if i > 1
-#			node.vm.provision "shell" do |s|
-#			  s.path = "scripts/setup-pig.sh"
-#			  end
-#			end
+			#if i > 1
+			node.vm.provision "shell" do |s|
+			  s.path = "scripts/setup-tez.sh"
+	#			  end
+			end
 
                         # Setup NameNode in node 1
 			if i == 1
@@ -108,6 +108,13 @@ Vagrant.configure("2") do |config|
 			    s.path = "scripts/setup-namenode.sh"
 			  end
 			end
+			
+			if i == 1
+			  node.vm.provision "shell" do |s|
+				s.path = "scripts/copy-tez.sh"
+			  end
+			end
+			
 
         end
 	end

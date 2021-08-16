@@ -19,12 +19,12 @@ SPARK_MIRROR_DOWNLOAD=https://ftp.cixug.es/apache/spark/spark-3.1.2/spark-3.1.2-
 SPARK_RES_DIR=/vagrant/resources/spark
 SPARK_CONF_DIR=/usr/local/spark/conf
 
-#Pig
-PIG_VERSION=pig-0.17.0
-PIG_ARCHIVE=$PIG_VERSION.tar.gz
-PIG_MIRROR_DOWNLOAD=https://ftp.cixug.es/apache/pig/pig-0.17.0/pig-0.17.0.tar.gz
-PIG_RES_DIR=/vagrant/resources/pig
-PIG_CONF_DIR=/usr/local/pig/conf
+# Tez
+TEZ_VERSION=0.10.1
+TEZ_RELEASE=apache-tez-0.10.1-bin
+TEZ_ARCHIVE=apache-tez-0.10.1-bin.tar.gz
+TEZ_MIRROR_DOWNLOAD=https://downloads.apache.org/tez/0.10.1/apache-tez-0.10.1-bin.tar.gz
+TEZ_RES_DIR=/vagrant/resources/tez
 
 #HIVE
 HIVE_VERSION=apache-hive-3.1.2-bin

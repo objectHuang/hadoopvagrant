@@ -19,3 +19,8 @@ ssh node2 bash /vagrant/scripts/setup-yarn.sh
 # Start spark daemons in node1. Please comment out if you don't need spark in the cluster
 echo "############## Starting Spark in the cluster"
 $SPARK_HOME/sbin/start-all.sh
+
+
+#Init the hive schema
+echo "############### Init the hive schema"
+schematool -dbType mysql -initSchema
