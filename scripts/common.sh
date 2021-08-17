@@ -20,10 +20,10 @@ SPARK_RES_DIR=/vagrant/resources/spark
 SPARK_CONF_DIR=/usr/local/spark/conf
 
 # Tez
-TEZ_VERSION=0.10.1
-TEZ_RELEASE=apache-tez-0.10.1-bin
-TEZ_ARCHIVE=apache-tez-0.10.1-bin.tar.gz
-TEZ_MIRROR_DOWNLOAD=https://downloads.apache.org/tez/0.10.1/apache-tez-0.10.1-bin.tar.gz
+TEZ_VERSION=0.9.2
+TEZ_RELEASE=apache-tez-0.9.2-bin
+TEZ_ARCHIVE=apache-tez-0.9.2-bin.tar.gz
+TEZ_MIRROR_DOWNLOAD=https://downloads.apache.org/tez/0.9.2/apache-tez-0.9.2-bin.tar.gz
 TEZ_RES_DIR=/vagrant/resources/tez
 
 #HIVE

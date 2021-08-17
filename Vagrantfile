@@ -82,11 +82,11 @@ Vagrant.configure("2") do |config|
             end
                         
 			# Setup spark  (Spark slaves [3:X])
-			node.vm.provision "shell", path: "scripts/setup-spark.sh"
-			node.vm.provision "shell" do |s|
-			  s.path = "scripts/setup-spark-slaves.sh"
-			  s.args = "-s 3 -t #{numNodes}"
-			end
+			# node.vm.provision "shell", path: "scripts/setup-spark.sh"
+			# node.vm.provision "shell" do |s|
+			#   s.path = "scripts/setup-spark-slaves.sh"
+			#   s.args = "-s 3 -t #{numNodes}"
+			# end
 
                         ### why only on datanodes? My idea is to interact always from node1, so I think I should better install it everywhere
 			# Setup pig & hive client in datanodes

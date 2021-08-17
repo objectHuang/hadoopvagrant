@@ -5,8 +5,11 @@
 
   <property>
     <name>tez.lib.uris</name>
-    <value>hdfs://node1:8020/user/tez/share/tez.tar.gz</value>
+    <value>hdfs://node1/tez/tez/share/tez.tar.gz</value>
     <type>string</type>
   </property>
-
+  <property>
+    <name>tez.container.max.java.heap.fraction</name>
+    <value>0.2</value>
+  </property>
 </configuration>

@@ -39,4 +39,12 @@
   <name>dfs.namenode.handler.count</name>
   <value>25</value>
  </property>
+  <property>
+      <name>dfs.namenode.decommission.interval</name>
+      <value>30</value>
+  </property>
+ <property>
+    <name>dfs.client.datanode-restart.timeout</name>
+    <value>30</value>
+</property>
 </configuration>

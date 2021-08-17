@@ -1,4 +1,11 @@
 
+test script for tez and hive
+hive --hiveconf hive.root.logger=WARN,console
+
+hive> create table user_info(user_id bigint, firstname string, lastname string, count string);
+hive> insert into user_info values(1,'dennis','hu','CN'),(2,'Json','Lv','Jpn'),(3,'Mike','Lu','USA');
+
+
 # Table of Contents
 
 1.  [Build a test Hadoop cluster (Hadoop 3.2.2; Spark 3.1.2; Pig 0.17.0; Hive 3.1.2) using Vagrant](#org48316f5)
