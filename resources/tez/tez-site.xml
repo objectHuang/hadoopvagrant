@@ -10,6 +10,6 @@
   </property>
   <property>
     <name>tez.container.max.java.heap.fraction</name>
-    <value>0.2</value>
+    <value>0.6</value>
   </property>
 </configuration>

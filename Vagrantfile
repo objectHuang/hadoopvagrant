@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
 
 			node.vm.provider "virtualbox" do |v|
 			  v.name = "node#{i}"
-			  v.customize ["modifyvm", :id, "--memory", "2048"]
+			  v.customize ["modifyvm", :id, "--memory", "4096"]
 			end
 
 			if i < 10
@@ -80,7 +80,8 @@ Vagrant.configure("2") do |config|
             	    	s.path = "scripts/setup-javac.sh"
              	end
             end
-                        
+            
+			node.vm.provision :shell, path: 'scripts/setup-sqoop.sh'
 			# Setup spark  (Spark slaves [3:X])
 			# node.vm.provision "shell", path: "scripts/setup-spark.sh"
 			# node.vm.provision "shell" do |s|

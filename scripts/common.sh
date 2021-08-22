@@ -20,11 +20,16 @@ SPARK_RES_DIR=/vagrant/resources/spark
 SPARK_CONF_DIR=/usr/local/spark/conf
 
 # Tez
-TEZ_VERSION=0.9.2
 TEZ_RELEASE=apache-tez-0.9.2-bin
-TEZ_ARCHIVE=apache-tez-0.9.2-bin.tar.gz
+TEZ_ARCHIVE=${TEZ_RELEASE}.tar.gz
 TEZ_MIRROR_DOWNLOAD=https://downloads.apache.org/tez/0.9.2/apache-tez-0.9.2-bin.tar.gz
 TEZ_RES_DIR=/vagrant/resources/tez
+
+# sqoop v
+SQOOP_RELEASE=sqoop-1.4.7.bin__hadoop-2.6.0
+SQOOP_ARCHIVE=${SQOOP_RELEASE}.tar.gz
+SQOOP_MIRROR_DOWNLOAD=http://archive.apache.org/dist/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
+SQOOP_RES_DIR=/vagrant/resources/sqoop
 
 #HIVE
 HIVE_VERSION=apache-hive-3.1.2-bin

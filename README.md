@@ -6,6 +6,15 @@ hive> create table user_info(user_id bigint, firstname string, lastname string, 
 hive> insert into user_info values(1,'dennis','hu','CN'),(2,'Json','Lv','Jpn'),(3,'Mike','Lu','USA');
 
 
+CREATE TABLE acid_tbl (key INT, value STRING, action STRING)
+PARTITIONED BY (trans_date DATE)
+CLUSTERED BY (key) INTO 3 BUCKETS
+STORED AS ORC TBLPROPERTIES ('transactional'='true');
+
+insert into acid_tbl values(1, 'a', 'action1', '2021-08-11'), (2, 'b', 'action2','2021-08-12'),(3, 'c', 'action3','2021-08-14'),(4, 'd', 'action4','2021-08-11');
+
+
+
 # Table of Contents
 
 1.  [Build a test Hadoop cluster (Hadoop 3.2.2; Spark 3.1.2; Pig 0.17.0; Hive 3.1.2) using Vagrant](#org48316f5)
